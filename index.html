@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script>
+      function onSuccess(totalSpent) {
+        var div = document.getElementById('output');
+        div.innerHTML = 'You have spent ' + totalSpent
+            + ' INR on Ola Cabs';
+      }
+
+      google.script.run.withSuccessHandler(onSuccess)
+          .calculateOlaExpenditure();
+    </script>
+  </head>
+  <body>
+    <div id="output"></div>
+  </body>
+</html>
